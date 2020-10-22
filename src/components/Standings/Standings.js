@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { getBatters } from '../../actions/batterActions';
 import { getPitchers } from '../../actions/pitcherActions';
 import { getTeams } from '../../actions/teamActions';
@@ -17,7 +18,8 @@ class Standings extends Component {
             advancedStatsTwoIsActive: false,
             divisionView: true,
             leagueView: false,
-            overallView: false
+            overallView: false,
+            viewOptionsDropdownOpen: false
         };
     }
 
@@ -31,6 +33,13 @@ class Standings extends Component {
         if (store.getState().teams.length === 0) {
             this.props.getTeams();
         }
+    }
+
+    setDropdownOpen = () => {
+        const { viewOptionsDropdownOpen } = this.state;
+        this.setState({
+            viewOptionsDropdownOpen: !viewOptionsDropdownOpen
+        });
     }
 
     changeStatPage = (property) => {
@@ -180,20 +189,20 @@ class Standings extends Component {
     }
 
     render() {
-        const { standingsIsActive, advancedStatsOneIsActive, advancedStatsTwoIsActive } = this.state;
+        const { standingsIsActive, advancedStatsOneIsActive, advancedStatsTwoIsActive, viewOptionsDropdownOpen } = this.state;
         return (
             <div className='standings-container'>
-                <div className='btn-group division-conference-view-dropdown'>
-                <button type='button' className='btn dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-                    View Options
-                </button>
-                <div className='dropdown-menu'>
-                    <button className='dropdown-item' type='button' onClick={() => this.changeLeagueView('divisions')}>Division</button>
-                    <button className='dropdown-item' type='button' onClick={() => this.changeLeagueView('leagues')}>League</button>
-                    <div className='dropdown-divider' />
-                    <button className='dropdown-item' type='button' onClick={() => this.changeLeagueView('overall')}>Overall</button>
-                </div>
-                </div>
+                <Dropdown isOpen={viewOptionsDropdownOpen} toggle={this.setDropdownOpen}>
+                    <DropdownToggle caret>
+                        View Options
+                    </DropdownToggle>
+                    <DropdownMenu>
+                        <DropdownItem onClick={() => this.changeLeagueView('divisions')}>Division</DropdownItem>
+                        <DropdownItem onClick={() => this.changeLeagueView('leagues')}>League</DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem onClick={() => this.changeLeagueView('overall')}>Overall</DropdownItem>
+                    </DropdownMenu>
+                </Dropdown>
                 <div className='container'>
                     <nav className='nav nav-pills flex-column flex-sm-row'>
                         <button className={`flex-sm-fill text-sm-center nav-link standingsButton ${standingsIsActive ? 'standingsButtonActive' : ''}`} type='button' onClick={() => this.changeStatPage('standings')}>Standings</button>

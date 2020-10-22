@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import 'bootstrap/dist/js/bootstrap.min';
+import 'reactstrap/dist/reactstrap.min';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import IndividualStatistics from './components/IndividualStatistics/IndividualStatistics';

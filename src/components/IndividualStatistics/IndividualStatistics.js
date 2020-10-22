@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import 'bootstrap/dist/js/bootstrap.min';
 import { getBatters } from '../../actions/batterActions';
 import { getPitchers } from '../../actions/pitcherActions';
 import { getTeams } from '../../actions/teamActions';
