@@ -1,0 +1,53 @@
+button:focus {
+    outline: 0;
+}
+.advancedStatsOne	{
+	display: none;
+}
+.advancedStatsTwo	{
+	display: none;
+}
+.leagueButton	{
+    background: white;
+    border: none;
+    color: #007BFF !important;
+}
+.leagueButton:hover {
+    background-color: #007BFF;
+    color: white !important;
+}
+.leagueButtonActive {
+    background-color: #007BFF;
+    color: white !important;
+}
+.leagueButtonActive:hover {
+    color: white !important;
+}
+.division-conference-view-dropdown	{
+	position: absolute;
+	top: 225px;
+	right: 300px;
+}
+.homeRunsPagination	{
+	margin-left: 458px;
+}
+@media screen and (min-width: 1600px) {
+	.stats-container {
+		margin: 150px 0px 0px 200px;
+	}
+}
+@media screen and (min-width: 1450px) and (max-width: 1599px) {
+	.stats-container {
+		margin: 150px 0px 0px 100px;
+	}
+}
+@media screen and (min-width: 1400px) and (max-width: 1449px) {
+	.stats-container {
+		margin: 150px 0px 0px 50px;
+	}
+}
+@media screen and (max-width: 1399px) {
+	.stats-container {
+		margin: 150px 0px 0px 0px;
+    }
+}

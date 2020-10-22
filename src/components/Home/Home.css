@@ -1,0 +1,55 @@
+#carousel {
+	position: absolute;
+	top: 0;
+}
+.slideImage {
+	height: 1000px;
+	width: 100%;
+}
+.slideOneHeader {
+	position: absolute;
+	left: 20%;
+	top: 13%;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+.researchImage {
+	height: 700px;
+	width: 800px !important;
+	padding: 100px 0px 100px 0px;
+	margin: 0px 0px 0px 50%;
+}
+@media screen and (max-width: 1655px) {
+	#area-one {
+		width: 1675px;
+	}
+	#area-two {
+		width: 1675px;
+	}
+	#area-three {
+		width: 1675px;
+	}
+}
+#area-two {
+	background: rgb(20, 20, 20);
+	color: white;
+	height: 33%;
+}
+.area-two-text-wrapper {
+	margin: 200px 0px 0px 200px;
+	position: absolute;
+}
+.area-two-sub-text {
+	margin: 0px 0px 0px 50px;
+}
+.area-two-home-run {
+	height: 300px;
+	margin: 30px 0px 0px 10px;
+	width: 500px;
+}
+#area-three {
+    background: url('/resources/img/dodgers.jpg');
+    background-repeat: no-repeat;
+	background-size: cover;
+	height: 800px;
+}

@@ -1,0 +1,40 @@
+.navbar {
+	font: Roboto;
+	font-weight: 500;
+	padding-bottom: 4px;
+	position: fixed !important;
+	top: 30px;
+	right: 10px;
+	background: none;
+	border: 0;
+	border-radius: 0;
+	z-index: 999;
+}
+.navbar-wrapper {
+    height: 0;
+}
+.navbar-freudware-wrapper {
+	left: 20px;
+	position: fixed;
+	top: 30px;
+	z-index: 1000;
+}
+.navbar-freudware-wrapper:hover {
+    background-color: yellow;
+}
+.navbar-freudware {
+    font-size: 36px !important;
+    width: 150px;
+}
+.navbar-freudware:hover {
+    background-color: yellow;
+}
+.navbar-item {
+	margin: 0px 10px 0px 10px;
+}
+.navbar-item:hover {
+	background-color: yellow;
+}
+a:hover {
+	color: black !important;
+}

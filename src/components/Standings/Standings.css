@@ -1,0 +1,50 @@
+.standingsButton	{
+    background: white;
+    border: none;
+    color: #007BFF !important;
+}
+.standingsButton:hover {
+    background-color: #007BFF;
+    color: white !important;
+}
+.division-table {
+    margin: 50px 0px 50px 0px;
+}
+.table {
+    font-weight: bold;
+}
+.division-conference-view-dropdown {
+    position: absolute !important;
+    top: 225px;
+    right: 300px;
+}
+.standingsButtonActive {
+    background-color: #007BFF;
+    color: white !important;
+}
+.standingsButtonActive:hover {
+    color: white !important;
+}
+button:focus {
+    outline: 0;
+}
+@media screen and (min-width: 1600px) {
+	.standings-container {
+		margin: 150px 0px 0px 200px;
+	}
+}
+@media screen and (min-width: 1450px) and (max-width: 1599px) {
+	.standings-container {
+		margin: 150px 0px 0px 100px;
+	}
+}
+@media screen and (min-width: 1400px) and (max-width: 1449px) {
+	.standings-container {
+		margin: 150px 0px 0px 50px;
+	}
+}
+@media screen and (max-width: 1399px) {
+	.standings-container {
+		margin: 150px 0px 0px 0px;
+    }
+}

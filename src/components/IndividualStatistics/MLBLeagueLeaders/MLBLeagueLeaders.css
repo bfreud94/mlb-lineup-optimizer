@@ -1,0 +1,9 @@
+.mlbLeagueLeadersTable {
+	margin-top: 50px;
+	margin-left: 115px;
+	width: 35% !important;
+	float: left;
+}
+.columnHeader {
+    font-weight: bold;
+}

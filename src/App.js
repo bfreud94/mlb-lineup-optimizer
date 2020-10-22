@@ -1,26 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
+import 'bootstrap/dist/js/bootstrap.min';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import IndividualStatistics from './components/IndividualStatistics/IndividualStatistics';
+import Standings from './components/Standings/Standings';
+import store from './store';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Provider store={store}>
+            <Router>
+                <Navbar />
+                <Route exact path='/home'>
+                    <Home />
+                </Route>
+                <Redirect exact from='/' to='/home' />
+                <Route exact path='/individualStatistics'>
+                    <IndividualStatistics />
+                </Route>
+                <Route exact path='/standings'>
+                    <Standings />
+                </Route>
+            </Router>
+        </Provider>
+    );
 }
 
 export default App;
